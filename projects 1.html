@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dylan Bannon</title>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		<style type="text/css"></style>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link href="styles.css" rel="stylesheet" type="text/css">
+	</head>
+	
+	<body>
+		<div id="header">
+			<div class="wrap">
+				<div id="title-area">
+					<a href="index.html">
+						<img src="logo.png" id="logo">
+					</a>
+				</div>
+
+				<nav>
+					<ul>
+						<li class="uslide"><a href="index.html">About Me</a></li>
+						<li class="uslide"><a href="projects.html">Projects</a></li>
+						<li class="uslide"><a href="resume.pdf">Résumé</a></li>
+						<li class="uslide"><a href="contact.html">Contact</a></li>
+					</ul>		
+				</nav>
+			</div>
+		</div>
+		<div id="body">
+			<div class="wrap">
+				<div id="sidebar">
+					<ul id="project-links">
+						<li class="uslide"><a href="#MDA">Multithreaded Dictionary Attack</a></li>
+						<li class="uslide"><a href="#MISH">My Interactive Shell (MISH)</a></li>
+						<li class="uslide"><a href="#PMI">Postfix Math Interpreter</a></li>
+						<li class="uslide"><a href="#GPS">Generic Puzzle Solver/Solitaire Chess</a></li>
+						<li class="uslide"><a href="#ToolShare">ToolShare</a></li>
+					</ul>
+				</div>
+				<div id="content">
+					<div id="MDA">
+						<p class="content-paragraph">Multithreaded Dictionary Attack will go here</p>
+						<p class="content-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div id="MISH">
+						<p class="content-paragraph">My Interactive Shell will go here</p>
+						<p class="content-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div id="PMI">
+						<p class="content-paragraph">Postfix Math Interpreter will go here</p>
+						<p class="content-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div id="GPS">
+						<p class="content-paragraph">Generic Puzzle Solver will go here</p>
+						<p class="content-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div id="ToolShare">
+						<p class="content-paragraph">ToolShare will go here</p>
+						<p class="content-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					
+
+					
+				</div>
+			
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+	if($(window).scrollTop() > 150){
+    	//begin to scroll
+    	$("#project-links").css("position","fixed");
+    	$("#project-links").css("top",0);
+	} else {
+    //lock it back into place
+    	$("#project-links").css("position","relative");
+	}
+</script>
