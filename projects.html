@@ -7,6 +7,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 		<style type="text/css"></style>
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 		<script type="text/javascript" src="jquery.js"></script>
@@ -60,12 +61,22 @@
 				<div id="content">
 					<div id="MDA">
 						<h1>Multithreaded Dictionary Attack</h1>
-						<p class="content-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p class="content-paragraph">
+						This was the first project for my Concepts of Parallel and Distributed Systems class. This program (written in Java) carries out a dictionary attack in order to crack the passwords of a theoretical website that had their hashed passwords stolen. The idea is that a website, who hashes their passwords with 100000 executions of SHA-256, has had their hashed passwords and corresponding usernames stolen. My program attempts to find the string that hashes to each of the stolen hashes. The design of the program is as follows:
+						</p>
+						<p class="content-paragraph">
+						There are two types of threads, Group 1 and Group 2. The job of the Group 1 threads is to take a string from a file containing a number of common passwords and hash it using the same algorithm as the target website, and store it in a synchronized hash table. The Group 2 threads are given one of the stolen hashes and checks if it is in the synchronized hash table. If it is in the hash table, the thread prints out the username and its corresponding plaintext password. 
+						</p>
+						<p class="content-paragraph">
+						The key was to make sure that the hash table shared by all of the threads was synchronized, so that no two threads could enter the critical sections at the same time. This ended up being fairly simple to implement in Java. I made a wrapper class for a Java HashMap that had two methods of interest, <span class="monospace">put()</span> and <span class="monospace">get()</span>. Both have the synchronized keyword, preventing more than one thread from entering each method at the same time. <span class="monospace">put()</span> calls <span class="monospace">notifyAll()</span> after putting the hash and username into the HashMap, and <span class="monospace">get()</span> waits while the HashMap is empty or contains fewer than the maximum number of elements. The source code is below:
+						<p class="content-paragraph">PasswordCrack.java:</p>
+						<img src="images/PassCrack.png" class="project-img">
+						<p class="content-paragraph">Group1Thread.java:</p>
+						<img src="images/Group1Thread.png" class="project-img">
+						<p class="content-paragraph">Group1Thread.java:</p>
+						<img src="images/Group2Thread.png" class="project-img">
+						<p class="content-paragraph">PasswordTable.java:</p>
+						<img src="images/PassTab.png" class="project-img">
 					</div>
 					<div id="MISH">
 						<h1>My Interactive Shell</h1>
@@ -102,38 +113,22 @@
 						new process, and the child process calls execvp on the command. 
 						I used a top-down approach to the design of the program, starting with the 
 						user input and basic control loop, adding funtionality piece-by-piece (saving 
-						the annoying parts for last...) 
-						<br><br>
-						Here is the source code for MISH:
+						the annoying parts for last...) The source is below.
 						</p>
+						<p class="content-paragraph">mish.c</p>
 						<img src="images/MISH.png" class="project-img">
 					</div>
 					<div id="PMI">
 						<h1>Postfix Math Interpreter</h1>
-						<p class="content-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p class="content-paragraph">[page under construction]</p>
 					</div>
 					<div id="GPS">
 						<h1>Generic Puzzle Solver</h1>
-						<p class="content-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p class="content-paragraph">[page under construction]</p>
 					</div>
 					<div id="ToolShare">
 						<h1>ToolShare</h1>
-						<p class="content-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p class="content-paragraph">[page under construction]</p>
 					</div>
 					
 
