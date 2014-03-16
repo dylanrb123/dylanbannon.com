@@ -45,12 +45,7 @@
 		    						//begin to scroll
 									var links = $("#project-links");
 									links.attr('class', 'fixed');
-									var windowWidth = $(window).width();
-									var newLeft = .075 * windowWidth;
-		    						var newRight = .68 * windowWidth;
-		    						var strLeft = newLeft.toString() + 'px';
-		    						var strRight = newRight.toString() + 'px';
-		    						links.css({'left': strLeft, 'right': strRight, 'width': ''});
+									links.css('width', links.parent().width());
 								} else {
 									//lock it back into place
 		    						var links = $("#project-links");
