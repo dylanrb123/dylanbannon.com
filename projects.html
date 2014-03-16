@@ -43,10 +43,19 @@
 							$(window).scroll( function() {
 								if($(window).scrollTop() > 150){
 		    						//begin to scroll
-									document.getElementById("project-links").className = "fixed";
+									var links = $("#project-links");
+									links.attr('class', 'fixed');
+									var windowWidth = $(window).width();
+									var newLeft = .075 * windowWidth;
+		    						var newRight = .68 * windowWidth;
+		    						var strLeft = newLeft.toString() + 'px';
+		    						var strRight = newRight.toString() + 'px';
+		    						links.css({'left': strLeft, 'right': strRight, 'width': ''});
 								} else {
 									//lock it back into place
-		    						document.getElementById("project-links").className  = "relative";
+		    						var links = $("#project-links");
+		    						links.attr('class','relative');
+		    						links.css({'left': '', 'right': '', 'width': '100%'});
 								}
 							});
 						</script>
