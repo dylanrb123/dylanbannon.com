@@ -129,7 +129,8 @@ nav a:hover {
 
 .fixed {
 	position: fixed;
-	width: 25%;
+	left: 100px;
+	right: 70%;
 	top: 120px;
 }
 
