@@ -78,6 +78,10 @@ a {
 	text-decoration: none;
 }
 
+a:visited {
+	color: #000000;
+}
+
 .uslide {
 	display: inline-block;
 	vertical-align: top;
@@ -180,8 +184,8 @@ h1 {
 	margin-top: 18px;
 	margin-bottom: 18px;
 	width: 80%;
-	border-radius: 15px;
-	box-shadow: 5px 5px 10px #888888;
+	border-radius: 10px;
+	box-shadow: 5px 5px 15px #999;
 
 }
 
