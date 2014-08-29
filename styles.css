@@ -251,3 +251,9 @@ strong {
 .monospace {
 	font-family: 'Inconsolata', sans-serif;
 }
+
+iframe {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
