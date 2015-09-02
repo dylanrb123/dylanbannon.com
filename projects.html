@@ -54,15 +54,69 @@
 								}
 							});
 						</script>
-						<li class="uslide"><a href="#top">Top of page</a></li>
-						<li class="uslide"><a href="#MDA">Multithreaded Dictionary Attack</a></li>
-						<li class="uslide"><a href="#MISH">My Interactive Shell (MISH)</a></li>
-						<li class="uslide"><a href="#PMI">Postfix Math Interpreter</a></li>
-						<li class="uslide"><a href="#GPS">Generic Puzzle Solver/Solitaire Chess</a></li>
-						<li class="uslide"><a href="#ToolShare">ToolShare</a></li>
+						<li class="uslide"><a href="#top">Top of page</a></li><br>
+						<li class="uslide"><a href="#ARK3">ARK3 Block Cipher</a></li><br>
+						<li class="uslide"><a href="#Simon">Attack On SIMON Cipher</a></li><br>
+						<li class="uslide"><a href="#RSA">Attack on RSA</a></li><br>
+						<li class="uslide"><a href="#MDA">Multithreaded Dictionary Attack</a></li><br>
+						<li class="uslide"><a href="#MISH">My Interactive Shell (MISH)</a></li><br>
 					</ul>
 				</div>
 				<div id="content">
+
+					<div id="ARK3">
+						<h1>ARK3 Block Cipher</h1>
+						<p class="content-paragraph">[page under construction]</p>
+						<h2>ARK3.java</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/CryptoARK3/blob/master/src/ARK3.java"></script>
+
+						<h2>ARK3CFB.java</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/CryptoARK3/blob/master/src/ARK3CFB.java"></script>
+
+						<h2>Decrypt.java</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/CryptoARK3/blob/master/src/Decrypt.java"></script>
+
+						<h2>Encrypt.java</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/CryptoARK3/blob/master/src/Encrypt.java"></script>
+
+						<h2>GF28.java</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/CryptoARK3/blob/master/src/GF28.java"></script>
+
+						<h2>BlockCipher.java</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/CryptoARK3/blob/master/src/BlockCipher.java"></script>
+
+						<h2>StreamCipher.java</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/CryptoARK3/blob/master/src/StreamCipher.java"></script>
+
+					</div>
+					<div id="Simon">
+						<h1>Attack on Reduced Round SIMON 48/96</h1>
+						<p class="content-paragraph">[page under construction]</p>
+
+						<h2>CrackSimon.java</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/CryptoCrackSimon/blob/master/src/CrackSimon.java"></script>
+
+						<h2>CrackSimonUtils.java</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/CryptoCrackSimon/blob/master/src/CrackSimonUtils.java"></script>
+
+						<h2>PtCtPair.java</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/CryptoCrackSimon/blob/master/src/PtCtPair.java"></script>
+
+
+					</div>
+					<div id="RSA">
+						<h1>Shared Factor Attack on RSA</h1>
+						<p class="content-paragraph">[page under construction]</p>
+
+						<h2>RsaDecrypt.java</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/CryptoRsaDecrypt/blob/master/src/RsaDecrypt.java"></script>
+
+						<h2>RsaKey.java</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/CryptoRsaDecrypt/blob/master/src/RsaKey.java"></script>
+
+
+					</div>
+
 					<div id="MDA">
 						<h1>Multithreaded Dictionary Attack</h1>
 						<p class="content-paragraph">
@@ -73,14 +127,14 @@
 						</p>
 						<p class="content-paragraph">
 						The key was to make sure that the hash table shared by all of the threads was synchronized, so that no two threads could enter the critical sections at the same time. This ended up being fairly simple to implement in Java. I made a wrapper class for a Java HashMap that had two methods of interest, <span class="monospace">put()</span> and <span class="monospace">get()</span>. Both have the synchronized keyword, preventing more than one thread from entering each method at the same time. <span class="monospace">put()</span> calls <span class="monospace">notifyAll()</span> after putting the hash and username into the HashMap, and <span class="monospace">get()</span> waits while the HashMap is empty or contains fewer than the maximum number of elements. The source code is below:
-						<p class="content-paragraph">PasswordCrack.java:</p>
-						<img src="images/PassCrack.png" class="project-img">
-						<p class="content-paragraph">Group1Thread.java:</p>
-						<img src="images/Group1Thread.png" class="project-img">
-						<p class="content-paragraph">Group1Thread.java:</p>
-						<img src="images/Group2Thread.png" class="project-img">
-						<p class="content-paragraph">PasswordTable.java:</p>
-						<img src="images/PassTab.png" class="project-img">
+						<h2>PasswordCrack.java:</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/PasswordCrack/blob/master/src/PasswordCrack.java"></script>
+						<h2>Group1Thread.java:</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/PasswordCrack/blob/master/src/Group1Thread.java"></script>
+						<h2>Group1Thread.java:</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/PasswordCrack/blob/master/src/Group2Thread.java"></script>
+						<h2>PasswordTable.java:</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/PasswordCrack/blob/master/src/PasswordTable.java"></script>
 					</div>
 					<div id="MISH">
 						<h1>My Interactive Shell</h1>
@@ -93,21 +147,21 @@
 						if it was not a fatal error. <br><br>
 
 						The internal commands include: <br>
-						verbose {on/off}:<br>
+						<span class="monospace">verbose {on/off}</span>:<br>
 						&nbsp;&nbsp;&nbsp;&nbsp;Turns verbose mode on or off. Verbose mode displays valuable information about<br>
 						&nbsp;&nbsp;&nbsp;&nbsp;each command as it executes (command name, token list, process ID)<br><br>
 
-						help:<br>
+						<span class="monospace">help</span>:<br>
 						&nbsp;&nbsp;&nbsp;&nbsp;Displays all available internal commands.<br><br>
 
-						history:<br>
+						<span class="monospace">history</span>:<br>
 						&nbsp;&nbsp;&nbsp;&nbsp;Displays all commands that have been executed in this instance of MISH.<br><br>
 
-						quit:<br>
+						<span class="monospace">quit</span>:<br>
 						&nbsp;&nbsp;&nbsp;&nbsp;gracefully exits the program.<br><br>
 
 						To launch from the command line:<br>
-						&nbsp;&nbsp;&nbsp;&nbsp;mish {0/1} // 0 defaults verbose mode to on, 1 to off.<br><br>
+						&nbsp;&nbsp;&nbsp;&nbsp;<span class="monospace">mish {0/1} // 0 defaults verbose mode to on, 1 to off.</span><br><br>
 
 						First, the program handles the command line args, turning verbose mode on or 
 						off accordingly. Then, it enters the main control loop. In the loop, it first 
@@ -119,28 +173,11 @@
 						user input and basic control loop, adding funtionality piece-by-piece (saving 
 						the annoying parts for last...) The source is below.
 						</p>
-						<p class="content-paragraph">mish.c</p>
-						<img src="images/MISH.png" class="project-img">
+						<h2>mish.c</h2>
+						<script src="http://gist-it.appspot.com/http://github.com/dylanrb123/MISH/blob/master/mish.c"></script>
 					</div>
-					<div id="PMI">
-						<h1>Postfix Math Interpreter</h1>
-						<p class="content-paragraph">[page under construction]</p>
-					</div>
-					<div id="GPS">
-						<h1>Generic Puzzle Solver</h1>
-						<p class="content-paragraph">[page under construction]</p>
-					</div>
-					<div id="ToolShare">
-						<h1>ToolShare</h1>
-						<p class="content-paragraph">[page under construction]</p>
-					</div>
-					
-
-					
 				</div>
-			
 			</div>
 		</div>
 	</body>
-
 </html>
